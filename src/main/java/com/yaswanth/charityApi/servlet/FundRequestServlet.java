@@ -21,7 +21,7 @@ public class FundRequestServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String isStatus = null;
+	
 		FundRequestController controller = new FundRequestController();
 		Request req = new Request();
 		String fundType = request.getParameter("fundType");
@@ -35,7 +35,7 @@ public class FundRequestServlet extends HttpServlet {
 		req.setAmount(amount);
 		req.setExpireDate(date);
 		req.setAdminId(id);
-		isStatus = controller.insert(req);
+		String isStatus = controller.insert(req);
 
 		String json = "{\"isStatus\"" +":"+"\"" + isStatus + "\"}";
 		PrintWriter out = response.getWriter();

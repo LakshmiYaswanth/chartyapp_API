@@ -21,17 +21,17 @@ public class TransactionServlet extends HttpServlet {
 			throws ServletException, IOException {
 		Transaction transactionObj = new Transaction();
 		TransactionController controllerObj = new TransactionController();
-		String donorId = request.getParameter("id");
-		Integer id = Integer.parseInt(donorId);
+		String Id = request.getParameter("donorId");
+		Integer donorId = Integer.parseInt(Id);
 
-		String fundRequestId = request.getParameter("fundRequestId");
-		Integer fundId = Integer.parseInt(fundRequestId);
+		String fundRequestId = request.getParameter("requestId");
+		Integer RequestId = Integer.parseInt(fundRequestId);
 
 		String amount = request.getParameter("amount");
 		Integer requestAmount = Integer.parseInt(amount);
 
-		transactionObj.setDonorId(id);
-		transactionObj.setRequestId(fundId);
+		transactionObj.setDonorId(donorId);
+		transactionObj.setRequestId(RequestId);
 		transactionObj.setAmountfunded(requestAmount);
 		
 		String json = controllerObj.transaction(transactionObj);
