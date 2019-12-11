@@ -20,16 +20,19 @@ import com.yaswanth.myfundingapp.model.Request;
  */
 public class ListFundedDonorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		ListFundedDonorController controller = new ListFundedDonorController();
-		Request requestobj=new Request();
+		Request requestobj = new Request();
 		String list = null;
 		try {
 			String fundType = request.getParameter("fundType");
-			requestobj.setFundType(fundType);
-			list = controller.fundlist(fundType);
+			if (fundType != null && !"".equals(fundType)) {
+				requestobj.setFundType(fundType);
+				list = controller.fundlist(fundType);
+			}
 		} catch (ServiceException e) {
 			e.printStackTrace();
 		}

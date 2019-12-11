@@ -27,6 +27,8 @@ public class ListFundedDonorController {
 		json = gson.toJson(request1);
 		return json;
 	}
+	
+	
 	public static void main(String args[]) throws ServiceException {
 		ListFundedDonorController obj = new ListFundedDonorController();
 		String json = obj.fundlist("food");

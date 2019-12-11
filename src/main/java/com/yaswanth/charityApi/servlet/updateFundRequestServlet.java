@@ -19,7 +19,7 @@ public class updateFundRequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	 @Override
-		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			updateFundRequestController updateFundControl = new updateFundRequestController();
 			Request req = new Request();
 			String fundType = request.getParameter("fundType");

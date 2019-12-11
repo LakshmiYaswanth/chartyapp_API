@@ -22,7 +22,7 @@ public class DonorFundinglistServlet extends HttpServlet {
 			DonorFundinglistController controller = new DonorFundinglistController();
 			String req = null;
 			String name = request.getParameter("name");
-				req =controller.fundlist(name);
+			req =controller.fundlist(name);
 		    PrintWriter out = response.getWriter();
 			out.write(req);
 		}

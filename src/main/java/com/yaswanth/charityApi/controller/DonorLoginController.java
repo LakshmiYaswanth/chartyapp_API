@@ -42,7 +42,7 @@ public class DonorLoginController {
 	}
 	public static void main(String args[]) {
 		DonorLoginController obj = new DonorLoginController();
-			String json = obj.donorLogin("yaswanth","Yaswanth");
+			String json = obj.donorLogin("yas","Yaswh");
 	    System.out.println(json);
 	}
 

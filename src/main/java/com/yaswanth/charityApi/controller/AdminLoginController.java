@@ -37,6 +37,7 @@ public class AdminLoginController {
 			jsonObj.addProperty("errorMessage", errorMsg);
 			json = jsonObj.toString();
 		}
+		System.out.println(json);
 		return json;
 	}
 	public static void main(String args[]) {

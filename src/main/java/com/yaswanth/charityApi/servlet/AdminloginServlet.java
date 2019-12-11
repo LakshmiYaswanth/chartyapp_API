@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.yaswanth.charityApi.controller.AdminLoginController;
 import com.yaswanth.myfundingapp.model.Admin;
 
-/**
+/** 
  * Servlet implementation class AdminloginServlet
  */
 public class AdminloginServlet extends HttpServlet {
@@ -19,7 +19,7 @@ public class AdminloginServlet extends HttpServlet {
 		private static final long serialVersionUID = 1L;
 
 		@Override
-		protected void doGet(HttpServletRequest request, HttpServletResponse response)
+		protected void doPost(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
 				Admin admin = new Admin();
 				AdminLoginController loginController = new AdminLoginController();
