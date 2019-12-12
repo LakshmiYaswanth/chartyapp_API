@@ -20,8 +20,7 @@ public class ListFundedDonorController {
      */
 	public String fundlist(String fundType) throws ServiceException {
 		RequestService service = new RequestService();
-		 List<Request> request1=new ArrayList<Request>();
-		request1 = service.FundType(fundType);
+		 List<Request> request1=service.FundType(fundType);
 		String json=null;
 		Gson gson = new Gson();
 		json = gson.toJson(request1);

@@ -20,10 +20,10 @@ public class DonorFundinglistController {
 	 * @return json
      */
 	DonorService service = new DonorService();
-		public String fundlist(String name)  {
+		public String fundlist(String email)  {
 			List<Donor> list = new ArrayList<Donor>();
 				try {
-					list = service.fundingList(name);
+					list = service.fundingList(email);
 				} catch (DBExeception e) {
 					e.printStackTrace();
 				}
@@ -34,7 +34,7 @@ public class DonorFundinglistController {
 		}
 		public static void main(String args[]) {
 			DonorFundinglistController obj = new DonorFundinglistController();
-				String json = obj.fundlist("barath");
+				String json = obj.fundlist("ram@gmail.com");
 		    System.out.println(json);
 		}
 	}

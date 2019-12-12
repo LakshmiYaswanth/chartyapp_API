@@ -26,18 +26,16 @@ public class ListFundedDonorServlet extends HttpServlet {
 			throws ServletException, IOException {
 		ListFundedDonorController controller = new ListFundedDonorController();
 		Request requestobj = new Request();
-		String list = null;
+		String json = null;
 		try {
 			String fundType = request.getParameter("fundType");
 			if (fundType != null && !"".equals(fundType)) {
 				requestobj.setFundType(fundType);
-				list = controller.fundlist(fundType);
+				json = controller.fundlist(fundType);
 			}
 		} catch (ServiceException e) {
 			e.printStackTrace();
 		}
-		Gson gson = new Gson();
-		String json = gson.toJson(list);
 		PrintWriter out = response.getWriter();
 		out.write(json);
 		out.flush();

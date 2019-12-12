@@ -1,4 +1,4 @@
-package com.yaswanth.charityApi.servlet;
+  package com.yaswanth.charityApi.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +20,7 @@ public class ListFundRequestServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-ListFundRequestController donorController = new ListFundRequestController();
+     ListFundRequestController donorController = new ListFundRequestController();
 		String json = null;
 		json = donorController.list();
 		PrintWriter out = response.getWriter();

@@ -21,7 +21,7 @@ public class DonorFundinglistServlet extends HttpServlet {
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			DonorFundinglistController controller = new DonorFundinglistController();
 			String req = null;
-			String name = request.getParameter("name");
+			String name = request.getParameter("email");
 			req =controller.fundlist(name);
 		    PrintWriter out = response.getWriter();
 			out.write(req);

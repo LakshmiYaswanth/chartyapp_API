@@ -21,10 +21,10 @@ public class ListDonorServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   DonorlistController donorlistControl = new DonorlistController();
-		String json = null;
-		json = donorlistControl.listDonor();
+		String json = donorlistControl.listDonor();
 		PrintWriter out = response.getWriter();
 		out.write(json);
 	}
 
 }
+ 

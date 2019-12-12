@@ -10,7 +10,7 @@ import com.yaswanth.myfundingapp.service.RequestService;
 
 public class ListFundTypeController {
 	/** List fund type where we have to give only valid inputs 
-	 * @param fundType
+	 * @param
 	 * @return json
 	 */
 	public String fundlist() {
