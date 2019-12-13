@@ -6,6 +6,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.yaswanth.myfundingapp.exceptions.ServiceException;
 import com.yaswanth.myfundingapp.model.Request;
+import com.yaswanth.myfundingapp.model.RequestType;
 import com.yaswanth.myfundingapp.service.RequestService;
 
 public class ListFundTypeController {
@@ -15,9 +16,9 @@ public class ListFundTypeController {
 	 */
 	public String fundlist() {
 		RequestService service = new RequestService();
-		List<Request> request1 = null;
+		List<RequestType> request1 = null;
 		try {
-			request1=new ArrayList<Request>();
+			request1=new ArrayList<RequestType>();
 			request1 = service.Fundtypelist();
 		} catch (ServiceException e) {
 			e.printStackTrace();

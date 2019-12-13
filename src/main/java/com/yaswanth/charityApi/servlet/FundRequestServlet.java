@@ -24,7 +24,8 @@ public class FundRequestServlet extends HttpServlet {
 	
 		FundRequestController controller = new FundRequestController();
 		Request req = new Request();
-		String fundType = request.getParameter("fundType");
+		String fundTypeId = request.getParameter("fundTypeId");
+		Integer fundType = Integer.parseInt(fundTypeId);
 		String description=request.getParameter("description");
 		String targetAmount = request.getParameter("amount");
 		Integer amount = Integer.parseInt(targetAmount);
@@ -32,7 +33,7 @@ public class FundRequestServlet extends HttpServlet {
 		LocalDate date = LocalDate.parse(expireDate);
 		String adminId = request.getParameter("adminId");
 		Integer id=Integer.parseInt(adminId);
-		req.setFundType(fundType);
+		req.setFundTypeId(fundType);
 		req.setDescription(description);
 		req.setAmount(amount);
 		req.setExpireDate(date);

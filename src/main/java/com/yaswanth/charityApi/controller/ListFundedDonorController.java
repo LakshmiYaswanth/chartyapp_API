@@ -1,6 +1,5 @@
 package com.yaswanth.charityApi.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -18,7 +17,7 @@ public class ListFundedDonorController {
      * @param name
 	 * @return json
      */
-	public String fundlist(String fundType) throws ServiceException {
+	public String fundlist(Integer fundType) throws ServiceException {
 		RequestService service = new RequestService();
 		 List<Request> request1=service.FundType(fundType);
 		String json=null;
@@ -30,7 +29,7 @@ public class ListFundedDonorController {
 	
 	public static void main(String args[]) throws ServiceException {
 		ListFundedDonorController obj = new ListFundedDonorController();
-		String json = obj.fundlist("food");
+		String json = obj.fundlist(1);
 	    System.out.println(json);
 	}
 }

@@ -22,14 +22,15 @@ public class updateFundRequestServlet extends HttpServlet {
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			updateFundRequestController updateFundControl = new updateFundRequestController();
 			Request req = new Request();
-			String fundType = request.getParameter("fundType");
+			String fundTypeId=request.getParameter("fundTypeId");
+			Integer fundtypeId=Integer.parseInt(fundTypeId);
 			String targetAmount = request.getParameter("amount");
 			Integer amount = Integer.parseInt(targetAmount);
 			String expireDate = request.getParameter("date");
 			LocalDate date = LocalDate.parse(expireDate);
 			String RequestId = request.getParameter("requestId");
 			Integer id=Integer.parseInt(RequestId);
-			req.setFundType(fundType);
+			req.setFundTypeId(fundtypeId);
 			req.setAmount(amount);
 			req.setExpireDate(date);
 			req.setRequestId(id);
